@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Go Rest Api</string>
+    <string name="add_user">Add user</string>
+    <string name="name">Name</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="status">Status</string>
+    <string name="active">Active</string>
+    <string name="inactive">Inactive</string>
+    <string name="email">Email</string>
+    <string name="create">Create</string>
+    <string name="create_user">Create user</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="error_message">Something went wrong…</string>
+    <string name="loading_message">Loading…</string>
+    <string name="all_users">All users</string>
+
+</resources>

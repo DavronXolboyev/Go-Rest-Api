@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="16dp"
+    tools:context=".activity.MainActivity">
+
+    <EditText
+        android:id="@+id/edit_query"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:hint="Search..."
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/search_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:text="Search"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/edit_query"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit_query" />
+
+    <TextView
+        android:id="@+id/error_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Something went wrong..."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/retry_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Retry"
+        app:layout_constraintEnd_toEndOf="@id/error_tv"
+        app:layout_constraintStart_toStartOf="@id/error_tv"
+        app:layout_constraintTop_toBottomOf="@id/error_tv" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUsers"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/search_btn"
+        app:layout_constraintStart_toStartOf="@id/edit_query"
+        app:layout_constraintTop_toBottomOf="@id/edit_query"
+        tools:listitem="@layout/item_list" />
+</androidx.constraintlayout.widget.ConstraintLayout>
